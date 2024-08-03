@@ -15,7 +15,7 @@ jobs:
       - name: Read tag from module-version.json
         id: read_tag
         run: |
-          TAG=$(jq -r '.tag' module-version.json)
+          TAG=$(jq -r '.version' module-version.json)
           echo "TAG=$TAG" >> $GITHUB_ENV
 
       - name: Log in to Docker Hub
